@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Simple, keyboard-friendly TODO app with filters, editing, and local storage." />
+  <title>TODO App — Styled</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <div class="header-row">
+        <div>
+          <h1>Milk Books</h1>
+          <p class="tagline">Capture every precious moment. Create</p>
+        </div>
+        <button id="theme-toggle" class="btn-ghost" type="button" aria-label="Toggle theme">🌙</button>
+      </div>
+    </header>
+
+    <section class="todo-container">
+      <div class="input-row">
+        <label for="todo-input" class="sr-only">Add a task</label>
+        <input id="todo-input" type="text" autocomplete="off" placeholder="Add a task and press Enter" />
+        <button id="add-btn" class="btn-primary" type="button">Add</button>
+      </div>
+
+      <div class="controls">
+        <div class="left">
+          <span id="remaining">0</span> tasks left
+        </div>
+        <div class="filters">
+          <button class="filter-btn active" type="button" data-filter="all">All</button>
+          <button class="filter-btn" type="button" data-filter="active">Active</button>
+          <button class="filter-btn" type="button" data-filter="completed">Completed</button>
+        </div>
+        <div class="right">
+          <button id="clear-completed" class="btn-link" type="button">Clear Completed</button>
+        </div>
+      </div>
+
+      <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+    </section>
+
+    <footer class="app-footer"></footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
